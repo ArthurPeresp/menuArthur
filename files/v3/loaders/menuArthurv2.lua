@@ -7,13 +7,12 @@ if not isfile("unxhub/themes/default.txt") then writefile("unxhub/themes/default
 if not isfile("unxhub/themes/UNXIsh.json") then writefile("unxhub/themes/UNXIsh.json", '{"MainColor":"131218","FontFace":"Code","AccentColor":"a970ff","OutlineColor":"262434","BackgroundColor":"0b0b0d","FontColor":"e8e6f2"}') end
 
 loadstring(game:HttpGet("https://raw.github.com/ArthurPeresp/menuArthur/main/gets/Modules/v2/Inv.lua",true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/not-gato/UNX/refs/heads/main/Modules/v2/Inv.lua",true))()
 
 if not isfile("UsedOneTime.unx") then
     writefile("UsedOneTime.unx","1")
 elseif not isfile("AlreadyRated.unx") then
-    loadstring(game:HttpGet(
-    "https://raw.github.com/ArthurPeresp/menuArthur/main/gets/Modules/v2/Rating.lua"
-    ))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/not-gato/UNX/refs/heads/main/Modules/v2/Rating.lua"))()
     writefile("AlreadyRated.unx","1")
 end
 
@@ -450,9 +449,9 @@ s("Game ID: "..tostring(bc))
 s("Developer Note: "..getgenv().unxshared.devnote)
 task.wait(0.12)
 local bd={
-    [12240122896]="https://raw.github.com/ArthurPeresp/menuArthur/main/gets/Games/FigureL.lua",
-    [136801880565837]="https://raw.github.com/ArthurPeresp/menuArthur/main/gets/Games/Flick.lua",
-    [893973440]="https://raw.github.com/ArthurPeresp/menuArthur/main/gets/Games/Flee.lua"
+    [12240122896]="https://apigetunx.vercel.app/Games/FigureL.lua",
+    [136801880565837]="https://apigetunx.vercel.app/Games/Flick.lua",
+    [893973440]="https://github.com/not-gato/UNX/raw/refs/heads/main/Games/Flee.lua"
 }
 local be,bf
 
