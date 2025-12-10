@@ -519,11 +519,6 @@ else
     getgenv().unxshared.isloaded=false
     local errorMsg=tostring(bf):gsub("`","")
     local kickTitle="LYnXHub"
-    local kickBody=
-    "<font color='rgb(255,100,100)'>An error occurred and LynX Hub must close.</font>\n\n"..
-    "<font color='rgb(220,220,220)'>Error: </font><font color='rgb(255,150,150)'>"..errorMsg.."</font>\n\n"..
-    "<font color='rgb(100,200,255)'>Please report this issue on our Discord server:</font>\n"..
-    "<font color='rgb(0,170,255)'>https://discord.gg/zpaMS8qUfB</font>"
     local success,cKickModule=pcall(function()
         return loadstring(game:HttpGet("https://raw.github.com/ArthurPeresp/menuArthur/main/gets/raw/scripts/cKick.lua"))()
     end)
