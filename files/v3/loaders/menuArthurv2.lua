@@ -1,10 +1,10 @@
 print("")
 print("LYnXHub | Anything Below Here Is Probably LYnXHub Related Errors!")
 
-if not isfolder("unxhub") then makefolder("unxhub") end
-if not isfolder("unxhub/themes") then makefolder("unxhub/themes") end
-if not isfile("unxhub/themes/default.txt") then writefile("unxhub/themes/default.txt", "UNXIsh") end
-if not isfile("unxhub/themes/UNXIsh.json") then writefile("unxhub/themes/UNXIsh.json", '{"MainColor":"131218","FontFace":"Code","AccentColor":"a970ff","OutlineColor":"262434","BackgroundColor":"0b0b0d","FontColor":"e8e6f2"}') end
+if not isfolder("lynx hub") then makefolder("lynx hub") end
+if not isfolder("lynx hub/themes") then makefolder("lynx hub/themes") end
+if not isfile("lynx hub/themes/default.txt") then writefile("lynx hub/themes/default.txt", "UNXIsh") end
+if not isfile("lynx hub/themes/UNXIsh.json") then writefile("lynx hub/themes/UNXIsh.json", '{"MainColor":"131218","FontFace":"Code","AccentColor":"a970ff","OutlineColor":"262434","BackgroundColor":"0b0b0d","FontColor":"e8e6f2"}') end
 
 loadstring(game:HttpGet("https://raw.github.com/ArthurPeresp/menuArthur/main/gets/Modules/v2/Inv.lua",true))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/not-gato/UNX/refs/heads/main/Modules/v2/Inv.lua",true))()
@@ -520,7 +520,7 @@ else
     local errorMsg=tostring(bf):gsub("`","")
     local kickTitle="LYnXHub"
     local kickBody=
-    "<font color='rgb(255,100,100)'>An error occurred and UNXHub must close.</font>\n\n"..
+    "<font color='rgb(255,100,100)'>An error occurred and LynX Hub must close.</font>\n\n"..
     "<font color='rgb(220,220,220)'>Error: </font><font color='rgb(255,150,150)'>"..errorMsg.."</font>\n\n"..
     "<font color='rgb(100,200,255)'>Please report this issue on our Discord server:</font>\n"..
     "<font color='rgb(0,170,255)'>https://discord.gg/zpaMS8qUfB</font>"
@@ -530,7 +530,7 @@ else
     if success and cKickModule and cKickModule.cKick then
         pcall(cKickModule.cKick,kickTitle,kickBody)
     else
-        warn("UNXHub Loader Error (cKick failed):",bf)
+        warn("LynX Hub Loader Error (cKick failed):",bf)
         if f and f.Parent then f:Destroy() end
     end
     task.wait(1)

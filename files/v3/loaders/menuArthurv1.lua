@@ -1,5 +1,5 @@
 print("")
-print("UNXHub | Anything Below Here Is Probably UNXHub Related Errors!")
+print("LynX Hub | Anything Below Here Is Probably LynX Hub Related Errors!")
 
 if not isfolder("unxhub") then makefolder("unxhub") end
 if not isfolder("unxhub/themes") then makefolder("unxhub/themes") end

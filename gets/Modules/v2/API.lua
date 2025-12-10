@@ -24,8 +24,8 @@ local BannedGames = {
 for _, banInfo in ipairs(BannedUsers) do
     if plr.UserId == banInfo.UserId then
         Nukegame()
-        print("[API]: User is banned from using UNXHub. Reason: " .. banInfo.Reason)
-        plr:Kick("UNXHub | Banned\n\nSorry, but you are banned from using the main loadstring.\nReason: " .. banInfo.Reason)
+        print("[API]: User is banned from using LynX Hub. Reason: " .. banInfo.Reason)
+        plr:Kick("LynX Hub | Banned\n\nSorry, but you are banned from using the main loadstring.\nReason: " .. banInfo.Reason)
         return
     end
 end
@@ -33,8 +33,8 @@ end
 for _, banInfo in ipairs(BannedGames) do
     if game.PlaceId == banInfo.PlaceId then
         Nukegame()
-        print("[API]: Game is banned from using UNXHub. Reason: " .. banInfo.Reason)
-        plr:Kick("UNXHub | Game Blocked\n\nSorry, but the game you are playing is banned from using UNXHub.\nReason: " .. banInfo.Reason)
+        print("[API]: Game is banned from using LynX Hub. Reason: " .. banInfo.Reason)
+        plr:Kick("LynX Hub | Game Blocked\n\nSorry, but the game you are playing is banned from using LynX Hub.\nReason: " .. banInfo.Reason)
         return
     end
 end

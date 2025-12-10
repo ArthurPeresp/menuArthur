@@ -25,17 +25,17 @@ local function FindAssetsFolder()
     end
     
     -- Fallback to old method if CurrentRooms fails
-    warn("[UNXHub] CurrentRooms not found or no Assets in rooms, trying fallback method")
+    warn("[LynX Hub] CurrentRooms not found or no Assets in rooms, trying fallback method")
     local mapFolder = workspace:FindFirstChild("Map")
     if mapFolder then
         local assetsFolder = mapFolder:FindFirstChild("Assets")
         if assetsFolder then
-            warn("[UNXHub] Using fallback Assets folder from workspace.Map.Assets")
+            warn("[LynX Hub] Using fallback Assets folder from workspace.Map.Assets")
             return assetsFolder
         end
     end
     
-    warn("[UNXHub] No Assets folder found in CurrentRooms or Map")
+    warn("[LynX Hub] No Assets folder found in CurrentRooms or Map")
     return nil
 end
 
