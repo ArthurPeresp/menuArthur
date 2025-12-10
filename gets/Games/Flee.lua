@@ -16,7 +16,7 @@ Library.ShowCustomCursor = true
 Library.ToggleKeybind = Enum.KeyCode.U
 
 local Window = Library:CreateWindow({
-    Title = "UNXHub",
+    Title = "LynX Hub",
     Footer = "Version: " .. (getgenv().unxshared and getgenv().unxshared.version or "Unknown") .. ", Game: " .. (getgenv().unxshared and getgenv().unxshared.gamename or "Unknown") .. ", Player: " .. (getgenv().unxshared and getgenv().unxshared.playername or "Unknown"),
     Icon = 73740010358428,
     NotifySide = "Right",
@@ -919,7 +919,7 @@ FeaturesGB:AddToggle("NoPCError", {Text = "No PC Error", Default = false})
 FeaturesGB:AddLabel("All Credits Of This Feature <font color=\"rgb(0,255,0)\"><u>Anti PC Error</u></font> Goes To <font color=\"rgb(0,255,0)\"><b>Imperial - Yarhm</b></font>", true)
 
 FeaturesGB:AddButton({
-    Text = "Execute Yarhm & Unload UNXHub",
+    Text = "Execute Yarhm & Unload LynXHub",
     Func = function()
         local src = ""
         local CoreGui = game:GetService("StarterGui")
@@ -1331,8 +1331,8 @@ SaveManager:SetLibrary(Library)
 SaveManager:IgnoreThemeSettings()
 SaveManager:SetIgnoreIndexes({"MenuKeybind"})
 
-ThemeManager:SetFolder("unxhub")
-SaveManager:SetFolder("unxhub")
+ThemeManager:SetFolder("lynxhub")
+SaveManager:SetFolder("lynxhub")
 
 SaveManager:BuildConfigSection(Tabs["UI Settings"])
 ThemeManager:ApplyToTab(Tabs["UI Settings"])
