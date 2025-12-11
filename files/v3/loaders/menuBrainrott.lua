@@ -110,7 +110,19 @@ end
 -- Example menu options (customize as needed)
 addMenuButton("Iniciar", function()
     print("Iniciando Brainrott...")
-    -- Add your game logic here
+    -- Executa o código de txt.lua localmente
+    local txtPath = "c:/Users/arthu/source/repos/menuArthur/gets/txt.lua"
+    local txtFile = nil
+    pcall(function()
+        local f = assert(readfile(txtPath))
+        local chunk, err = loadstring(f, "@txt.lua")
+        if chunk then
+            setfenv(chunk, getfenv())
+            chunk()
+        else
+            warn("Erro ao carregar txt.lua:", err)
+        end
+    end)
 end)
 addMenuButton("Opções", function()
     print("Exibindo opções...")
