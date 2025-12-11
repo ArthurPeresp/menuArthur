@@ -117,9 +117,6 @@ addMenuButton("Opções", function()
     -- Add options logic here
 end)
 addMenuButton("Sair", function()
-    TweenService:Create(mainFrame, TweenInfo.new(0.3), {BackgroundTransparency = 1}):Play()
-    TweenService:Create(screenGui, TweenInfo.new(0.3), {BackgroundTransparency = 1}):Play()
-    task.wait(0.3)
     screenGui:Destroy()
 end, theme.Error)
 
