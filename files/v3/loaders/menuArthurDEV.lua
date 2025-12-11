@@ -451,7 +451,7 @@ task.wait(0.12)
 local bd={
     [12240122896]="https://raw.github.com/ArthurPeresp/menuArthur/main/gets/Games/FigureL.lua",
     [136801880565837]="https://apigetunx.vercel.app/Games/Flick.lua",
-    [109983668079237]="https://apigetunx.vercel.app/Games/Flick.lua",
+    [109983668079237]="https://raw.github.com/ArthurPeresp/menuArthur/main/files/v3/loaders/menuBrainrott.lua",
     [893973440]="https://raw.github.com/ArthurPeresp/menuArthur/main/gets/Games/Flee.lua"
 }
 local be,bf
