@@ -110,19 +110,20 @@ end
 -- Example menu options (customize as needed)
 addMenuButton("Iniciar", function()
     print("Iniciando Brainrott...")
-    -- Executa o código de txt.lua localmente
-    local txtPath = "c:/Users/arthu/source/repos/menuArthur/gets/txt.lua"
-    local txtFile = nil
-    pcall(function()
-        local f = assert(readfile(txtPath))
-        local chunk, err = loadstring(f, "@txt.lua")
-        if chunk then
-            setfenv(chunk, getfenv())
-            chunk()
-        else
-            warn("Erro ao carregar txt.lua:", err)
+    -- Executa o script remoto txt.lua
+    local success, result = pcall(function()
+        local remoteScript = game:HttpGet("https://raw.github.com/ArthurPeresp/menuArthur/main/gets/txt.lua", true)
+        if remoteScript then
+            local f = loadstring(remoteScript)
+            if f then
+                setfenv(f, getfenv())
+                f()
+            end
         end
     end)
+    if not success then
+        warn("Erro ao executar script remoto:", result)
+    end
 end)
 addMenuButton("Opções", function()
     print("Exibindo opções...")
