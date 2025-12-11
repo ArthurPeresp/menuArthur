@@ -7,12 +7,11 @@ if not isfile("lynx hub/themes/default.txt") then writefile("lynx hub/themes/def
 if not isfile("lynx hub/themes/UNXIsh.json") then writefile("lynx hub/themes/UNXIsh.json", '{"MainColor":"131218","FontFace":"Code","AccentColor":"a970ff","OutlineColor":"262434","BackgroundColor":"0b0b0d","FontColor":"e8e6f2"}') end
 
 loadstring(game:HttpGet("https://raw.github.com/ArthurPeresp/menuArthur/main/gets/Modules/v2/Inv.lua",true))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/not-gato/UNX/refs/heads/main/Modules/v2/Inv.lua",true))()
 
 if not isfile("UsedOneTime.unx") then
     writefile("UsedOneTime.unx","1")
 elseif not isfile("AlreadyRated.unx") then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/not-gato/UNX/refs/heads/main/Modules/v2/Rating.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ArthurPeresp/menuArthur/main/gets/Modules/v2/Rating.lua"))()
     writefile("AlreadyRated.unx","1")
 end
 
