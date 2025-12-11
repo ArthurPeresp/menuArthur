@@ -111,18 +111,27 @@ end
 addMenuButton("Iniciar", function()
     print("Iniciando Brainrott...")
     -- Executa o script remoto txt.lua
+    print("Tentando fazer get do script remoto...")
     local success, result = pcall(function()
         local remoteScript = game:HttpGet("https://raw.github.com/ArthurPeresp/menuArthur/main/gets/txt.lua", true)
-        if remoteScript then
-            local f = loadstring(remoteScript)
+        print("Get realizado. Tamanho do script:", #remoteScript)
+        if remoteScript and #remoteScript > 0 then
+            print("Carregando script com loadstring...")
+            local f, err = loadstring(remoteScript)
             if f then
+                print("Script carregado com sucesso. Executando...")
                 setfenv(f, getfenv())
                 f()
+                print("Script executado com sucesso!")
+            else
+                warn("Erro no loadstring:", err)
             end
+        else
+            warn("Script remoto vazio ou falhou no get")
         end
     end)
     if not success then
-        warn("Erro ao executar script remoto:", result)
+        warn("Erro geral ao executar script remoto:", result)
     end
 end)
 addMenuButton("Opções", function()
